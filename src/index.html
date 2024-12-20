@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="flex items-center justify-between p-3">
+      <a class="flex items-center" href="#">
+        <img src="../assets/logo-R.png" height="73px" width="73px" alt="logo" />
+        <span class="font-bold font-body">Portfolio</span>
+      </a>
+      <div id="navbar" class="hidden md:flex gap-8 font-medium">
+        <a class="font-medium hover:text-blue-900" href="#">Home</a>
+        <a class="font-medium hover:text-blue-900" href="#">About</a>
+        <a class="font-medium hover:text-blue-900" href="#">Projects</a>
+        <a class="font-medium hover:text-blue-900" href="#">Service</a>
+        <a class="font-medium hover:text-blue-900" href="#">Blog</a>
+        <a class="font-medium hover:text-blue-900" href="#">Contact</a>
+      </div>
+      <button
+        class="hidden md:flex font-medium border border-6 px-3 rounded-md hover:bg-blue-700 hover:text-white"
+      >
+        <a class="hover:text-amber-600 flex items-center" href="#">
+          <img
+            src="../assets/discord-icon.png"
+            height="45px"
+            width="45px"
+            alt=""
+          />
+          <span class="hover:text-white">Discord</span>
+        </a>
+      </button>
+      <button class="p-3 md:hidden" onclick=" toggleMenu()">
+        <i class="fa fa-solid fa-bars text-blue-950"></i>
+      </button>
+      <div
+        id="nav-dialog"
+        class="hidden fixed z-10 md:hidden bg-white inset-0 p-2"
+      >
+        <div id="nav-bar" class="flex justify-between">
+          <a class="flex items-center" href="#">
+            <img
+              src="../assets/logo-R.png"
+              height="73px"
+              width="73px"
+              alt="logo"
+            />
+            <span class="font-bold font-body">Portfolio</span>
+          </a>
+          <button class="p-3 md:hidden" onclick="toggleMenu()">
+            <i
+              class="fas fa-times text-blue-950"
+              style="font-size: 28px; color: black"
+            ></i>
+          </button>
+        </div>
+        <div class="flex flex-col gap-4 mt-8">
+          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
+            >Home</a
+          >
+          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
+            >About</a
+          >
+          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
+            >Projects</a
+          >
+          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
+            >Service</a
+          >
+          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
+            >Blog</a
+          >
+          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
+            >Contact</a
+          >
+        </div>
+        <div>
+          <button
+            class="md:flex font-medium border border-black mt-4 px-3 rounded-md hover:bg-blue-700 hover:text-white"
+          >
+            <a class="hover:text-amber-600 flex items-center" href="#">
+              <img
+                src="../assets/discord-icon.png"
+                height="45px"
+                width="45px"
+                alt=""
+              />
+              <span class="hover:text-white">Discord</span>
+            </a>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero-section -->
+    <section>
+      <div class="border border-3 flex flex-col m-4">
+        <a href="#linkedin"><i class="fab fa-linkedin"></i> </a>
+        <a href="#linkedin"><i class="fab fa-github"></i> </a>
+        <a href="#linkedin"><i class="fab fa-instagram"></i> </a>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
