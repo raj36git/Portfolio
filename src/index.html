@@ -1,114 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
 
-    <link href="./output.css" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-  <body>
-    <nav class="flex items-center justify-between p-3">
-      <a class="flex items-center" href="#">
-        <img src="../assets/logo-R.png" height="73px" width="73px" alt="logo" />
-        <span class="font-bold font-body">Portfolio</span>
+  <link href="./output.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="flex items-center justify-between p-2">
+    <a class="flex items-center" href="#">
+      <img src="../assets/logo-R.png" height="73px" width="73px" alt="logo" />
+      <span class="font-bold font-body text-orange-500">Portfolio</span>
+    </a>
+    <div id="navbar" class="hidden md:flex gap-8 font-medium">
+      <a class="font-bold hover:text-orange-600" href="#">Home</a>
+      <a class="font-bold hover:text-orange-600" href="#">About</a>
+      <a class="font-bold hover:text-orange-600" href="#">Projects</a>
+      <a class="font-bold hover:text-orange-600" href="#">Service</a>
+      <a class="font-bold hover:text-orange-600" href="#">Blog</a>
+      <a class="font-bold hover:text-orange-600" href="#">Contact</a>
+    </div>
+    <button class="hidden md:flex font-medium border border-6 px-3 rounded-md hover:bg-blue-700 hover:text-white">
+      <a class="hover:text-amber-600 flex items-center" href="#">
+        <img src="../assets/discord-icon.png" height="45px" width="45px" alt="" />
+        <span class="hover:text-white">Discord</span>
       </a>
-      <div id="navbar" class="hidden md:flex gap-8 font-medium">
-        <a class="font-medium hover:text-blue-900" href="#">Home</a>
-        <a class="font-medium hover:text-blue-900" href="#">About</a>
-        <a class="font-medium hover:text-blue-900" href="#">Projects</a>
-        <a class="font-medium hover:text-blue-900" href="#">Service</a>
-        <a class="font-medium hover:text-blue-900" href="#">Blog</a>
-        <a class="font-medium hover:text-blue-900" href="#">Contact</a>
-      </div>
-      <button
-        class="hidden md:flex font-medium border border-6 px-3 rounded-md hover:bg-blue-700 hover:text-white"
-      >
-        <a class="hover:text-amber-600 flex items-center" href="#">
-          <img
-            src="../assets/discord-icon.png"
-            height="45px"
-            width="45px"
-            alt=""
-          />
-          <span class="hover:text-white">Discord</span>
+    </button>
+    <button class="p-3 md:hidden" onclick=" toggleMenu()">
+      <i class="fa fa-solid fa-bars text-blue-950"></i>
+    </button>
+    <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-2">
+      <div id="nav-bar" class="flex justify-between">
+        <a class="flex items-center" href="#">
+          <img src="../assets/logo-R.png" height="73px" width="73px" alt="logo" />
+          <span class="font-bold font-body">Portfolio</span>
         </a>
-      </button>
-      <button class="p-3 md:hidden" onclick=" toggleMenu()">
-        <i class="fa fa-solid fa-bars text-blue-950"></i>
-      </button>
-      <div
-        id="nav-dialog"
-        class="hidden fixed z-10 md:hidden bg-white inset-0 p-2"
-      >
-        <div id="nav-bar" class="flex justify-between">
-          <a class="flex items-center" href="#">
-            <img
-              src="../assets/logo-R.png"
-              height="73px"
-              width="73px"
-              alt="logo"
-            />
-            <span class="font-bold font-body">Portfolio</span>
+        <button class="p-3 md:hidden" onclick="toggleMenu()">
+          <i class="fas fa-times text-blue-950" style="font-size: 28px; color: black"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-4 mt-8">
+        <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#">Home</a>
+        <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#">About</a>
+        <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#">Projects</a>
+        <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#">Service</a>
+        <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#">Blog</a>
+        <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#">Contact</a>
+      </div>
+      <div>
+        <button class="md:flex font-medium border border-black mt-4 px-3 rounded-md hover:bg-blue-700 hover:text-white">
+          <a class="hover:text-amber-600 flex items-center" href="#">
+            <img src="../assets/discord-icon.png" height="45px" width="45px" alt="" />
+            <span class="hover:text-white">Discord</span>
           </a>
-          <button class="p-3 md:hidden" onclick="toggleMenu()">
-            <i
-              class="fas fa-times text-blue-950"
-              style="font-size: 28px; color: black"
-            ></i>
-          </button>
-        </div>
-        <div class="flex flex-col gap-4 mt-8">
-          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
-            >Home</a
-          >
-          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
-            >About</a
-          >
-          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
-            >Projects</a
-          >
-          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
-            >Service</a
-          >
-          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
-            >Blog</a
-          >
-          <a class="font-medium p-3 rounded-md hover:bg-gray-100" href="#"
-            >Contact</a
-          >
-        </div>
-        <div>
-          <button
-            class="md:flex font-medium border border-black mt-4 px-3 rounded-md hover:bg-blue-700 hover:text-white"
-          >
-            <a class="hover:text-amber-600 flex items-center" href="#">
-              <img
-                src="../assets/discord-icon.png"
-                height="45px"
-                width="45px"
-                alt=""
-              />
-              <span class="hover:text-white">Discord</span>
-            </a>
-          </button>
-        </div>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
+  <main>
     <!-- hero-section -->
-    <section>
-      <div class="border border-3 flex flex-col m-4">
-        <a href="#linkedin"><i class="fab fa-linkedin"></i> </a>
-        <a href="#linkedin"><i class="fab fa-github"></i> </a>
-        <a href="#linkedin"><i class="fab fa-instagram"></i> </a>
+    <div id="hero" class="bg-gradient-to-r from-purple-100 to-yellow-50 min-h-screen">
+      <div id="hero-container" class="max-w-4xl mx-auto px-6 pb-8 flex flex-col sm:items-center sm:text-center">
+        <div id="version-text"
+          class="mt-9 flex items-center gap-2 border border-yellow-500 p-2 rounded-md bg-yellow-200 w-fit cursor-pointer hover:bg-yellow-50 shadow-md hover:shadow-lg hover:translate-y-1 transition duration-300">
+          <div class="w-2 h-2 bg-yellow-300 rounded-full border border-yellow-600"></div>
+          <p class="text-orange-600 font-bold">Buy me a Coffee</p>
+          <i class="fas fa-coffee text-2xl text-orange-500"></i>
+        </div>
+        <h1></h1>
       </div>
-    </section>
-  </body>
-  <script src="script.js"></script>
+      <h1
+        class="max-w-2xl text-4xl text-orange-500 mx-auto px-6 pb-4 mt-4 flex flex-col font-semibold sm:max-w-4xl sm:text-6xl sm:mb-3 sm:text-center">
+        Hi all, I'm Raj 👋
+      </h1>
+      <p
+        class="max-w-4xl mx-auto px-6 -b-8 flex flex-col text-xl text-gray-700 sm:text-3xl sm:mb-8 sm:items-center sm:text-center">
+        A passionate Full Stack Software Developer 🚀 having an experience of
+        building Web and Mobile applications with MERN stack and it's
+        frameworks
+      </p>
+      <div id="container"
+        class="mt-4 mr-6 mx-6 flex flex-col gap-4 font-semibold sm:flex-row sm:justify-center sm:mt-6">
+        <button class="bg-blue-600 py-3 px-6 rounded-md text-white shadow-sm hover:bg-blue-500 sm:py-4 sm:px-8">
+          Resume <i class="fas fa-download text-2xl text-white"></i>
+        </button>
+        <button
+          class="py-3 px-6 border border-blue-950 rounded-md hover:bg-orange-300 hover:text-white sm:py-4 sm:px-8">
+          Contact Me
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="script.js"></script>
+
 </html>
